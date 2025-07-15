@@ -42,15 +42,25 @@ function deductAmount(amount) {
   });
 }
 
-buyProduct("Iphone 16")
-  .then((amount) => {
-    console.log("Amount to be paid:", amount);
-    return deductAmount(amount);
-  })
-  .then((message) => {
-    console.log(message);
-    console.log("Remaining balance:", account_balance);
-  })
-  .catch((err) => {
-    console.log("Error:", err);
-  });
+// buyProduct("Iphone 16")
+//   .then((amount) => {
+//     console.log("Amount to be paid:", amount);
+//     return deductAmount(amount);
+//   })
+//   .then((message) => {
+//     console.log(message);
+//     console.log("Remaining balance:", account_balance);
+//   })
+//   .catch((err) => {
+//     console.log("Error:", err);
+//   });
+  async function myfun(){
+    try{
+    let amount= await buyProduct("motorolla")
+  let message= await deductAmount(amount)
+  console.log(message)
+  }
+  catch(error){
+    console.log(error)
+  }
+}
