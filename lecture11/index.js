@@ -32,6 +32,10 @@ res.innerText = "Hello world doing this in js file";
 //1. getAttribute
 console.log(res.getAttribute("id"))
 let btn = document.querySelector(".btn")
+let myH=document.querySelector(".myh")
+console.log(myH.classList);
+myH.classList.add("h1");
+myH.classList.remove("myh");
 btn.addEventListener("click", () =>{
-    res.setAttribute("class", "js");
+myH.classList.toggle("jai ho");
 })
